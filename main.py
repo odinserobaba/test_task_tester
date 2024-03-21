@@ -14,14 +14,13 @@ class XMLChequeGenerator:
     def get_random_re(self, pattern):
         return exrex.getone(pattern)
 
-    def get_random_string(length=128):
-        characters = string.ascii_letters + string.digits + \
-            'абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-        return ''.join(random.choice(characters) for _ in range(length))
+    def get_random_string(self, length=128):
+        valid_characters = string.ascii_letters + string.digits
+        return ''.join(random.choice(valid_characters) for _ in range(length))
     # Bottle
 
-    def get_price():
-        return round(random.uniform(100.00, 1001.00), 2)
+    def get_price(self):
+        return self.get_random_re(r'[-]?\d+\.\d{0,2}')
 
     def get_barcode(self):
         return self.get_random_re(r'\d\dN\w{20}\d[0-1]\d[0-3]\d{10}\w{31}')
@@ -38,7 +37,7 @@ class XMLChequeGenerator:
         return round(random_value, 4)
 
     def get_volume(self):
-        return self.get_random_number(0.1000, 3.0000, 0.05)
+        return str(self.get_random_number(0.1000, 3.0000, 0.05))
 
     # Cheque
     def get_inns(self):
@@ -47,7 +46,11 @@ class XMLChequeGenerator:
         return inns
 
     def get_kpp(self):
-        return self.get_random_re(r'(\d{9}|)')
+        while True:
+            kpp = self.get_random_re(r'(\d{9}|)')
+            if kpp:
+                break
+        return kpp
 
     def get_address(self):
         return self.get_random_string()
@@ -62,12 +65,12 @@ class XMLChequeGenerator:
         return self.get_random_string()
 
     def get_shift(self):
-        return random.randint(0, 100)
+        return str(random.randint(0, 100))
 
     def get_number(self):
-        return random.randint(0, 100)
+        return str(random.randint(0, 100))
 
-    def get_random_datetime(self):
+    def get_datetime(self):
         return self.get_random_re(r'[0-3][0-9][0-1][0-9][0-9]{2}[0-2][0-9][0-5][0-9]')
 
     def get_cheque(self):
@@ -85,12 +88,13 @@ class XMLChequeGenerator:
         for _ in range(num_bottles):
             bottle = ET.SubElement(self.root, "Bottle")
             bottle.set('price', self.get_price())
-            bottle.set('barckode', self.get_barkode())
+            bottle.set('barcode', self.get_barcode())
             bottle.set('ean', random.choice(self.get_eans()))
             bottle.set('volume', self.get_volume())
 
     def save_xml(self, filename='generated_cheque.xml'):
-
+        self.get_cheque()
+        self.get_random_bottle()
         tree = ET.ElementTree(self.root)
         tree.write(filename, encoding="utf-8", xml_declaration=True)
 

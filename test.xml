@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Cheque inn="3702666196" kpp="577889485"
+    address="jCouqlzcIUpmkgRYDySHgsBGEPQ31vkX3pyxvzXYuy8JKe4tbaajPz4JfhGR09xuea8AQhAXistxraPHpnUIO6JAfvnrOdAwOfJ3zZsjpYVo7R827h5chLVOHOnm3lZU"
+    name="jzM81MspZmu1As5AKDei6iW6rLhpvuknz7rFoG9Qsa6CuEZtNpSW7mN6Oat2oc9AkTxUIuK1TvlJlYr02dxaYkq2dX6QzWr5fuuMKW0y86KOH2cswKevEQA1lpkavicb"
+    kassa="1GWN1NB6UA6O2UE4de45KBRsVyY7uUgpwqOEITVDYKDM5H1RzgHecQx8yY6AzH379bCmFsvUtF9GSvCIp2rpqpebXhcCVVrz0k7vyrBnenfhh1Y295o91F5kvmb1dKo8"
+    shift="61" number="41" datetime="3900282801">
+    <Bottle price="54389575264712992.7"
+        barcode="06Nt9ëGùDÎ8UOÌUìu¼æÿõýÁ70000887658003uåàÊ4CÈÏíëAGhïÉZÖ³UçGgüÞ3øAdGzª"
+        ean="4041485023685" volume="1.5" />
+    <Bottle price="3528461.41"
+        barcode="09NBMýcx²ÎBbn0ÈI9ßeÐÙÝ560605132566377nÈ9êíÜÀÁF5bºSºRóØvIóÒÐòÞaù½ÞÑJz"
+        ean="4041485138129" volume="0.45" />
+    <Bottle price="5131211684147253711.6"
+        barcode="14NdômNûÓMÍñlñRLoÍT1ÎÓí21932069918798eÉ6Ígh9ÙÍµ½ÏÀ_YÜmJIðóÿÑa8äÑëZç9"
+        ean="4607168072120" volume="2.1" />
+    <Bottle price="-3063196007."
+        barcode="37NØPÕìãèÝîZOhGQÎB8PeÊS400153191093125Âdîèá2ËöõübýEq1UóáEÔ1LÒÖ9ÉÆzÕÌ"
+        ean="4607168072120" volume="1.85" />
+    <Bottle price="942824294262653320.0"
+        barcode="98NaçEñENTvªtçUAîh³èBpj90209436297724SðbÚàZHícøbÛåÂãéÎðåáÚ²m9NòÙ¹ìÖI"
+        ean="4017773002472" volume="1.15" />
+    <Bottle price="-79001658615397.02"
+        barcode="16NX2môÁèÆûùBÁºè¾Haó4çÆ602372135015419ÐuïéÈEfßX1áeÐîÇxÉaâcjàkÅòObÎÃç"
+        ean="4041485138129" volume="2.45" />
+    <Bottle price="-0087.2"
+        barcode="06NcÖþöI4åu8èÊÁéýýa0ÁLu91410146127566LÆÃõÿIëÆËßæiXöcuDéÇdØ0ïeùÂI8Ìbà"
+        ean="4680002181295" volume="1.0" />
+</Cheque>
