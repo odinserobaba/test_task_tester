@@ -1,10 +1,9 @@
 import random
 import string
-import subprocess
 import xml.etree.ElementTree as ET
-
 import re
 import exrex
+import numpy as np
 
 
 class XMLChequeGenerator:
@@ -15,9 +14,10 @@ class XMLChequeGenerator:
         return exrex.getone(pattern)
 
     def get_random_string(self, length=128):
-        valid_characters = string.ascii_letters + string.digits
+        valid_characters = string.ascii_letters + string.digits.upper()
         return ''.join(random.choice(valid_characters) for _ in range(length))
     # Bottle
+    # Цена открицательное число?????
 
     def get_price(self):
         return self.get_random_re(r'[-]?\d+\.\d{0,2}')
@@ -30,14 +30,12 @@ class XMLChequeGenerator:
             eans = f.read().splitlines()
         return eans
 
-    def get_random_number(self, start=0.10000, end=3.0000, step=0.05):
-        range_values = int((end - start) / step) + 1
-        random_index = random.randint(0, range_values - 1)
-        random_value = start + random_index * step
-        return round(random_value, 4)
+    def get_random_number(self, start=0.1000, stop=3.0000, step=0.05):
+        range_values = list(np.arange(start, stop, step))
+        return round(random.choice(range_values), 4)
 
     def get_volume(self):
-        return str(self.get_random_number(0.1000, 3.0000, 0.05))
+        return str(round(self.get_random_number(0.1000, 3.0000, 0.05), 4))
 
     # Cheque
     def get_inns(self):
@@ -46,17 +44,10 @@ class XMLChequeGenerator:
         return inns
 
     def get_kpp(self):
-        while True:
-            kpp = self.get_random_re(r'(\d{9}|)')
-            if kpp:
-                break
-        return kpp
+        return str(random.randint(111111111, 999999999))
 
     def get_address(self):
         return self.get_random_string()
-
-    def get_price(self):
-        return self.get_random_re(r'[-]?\d+\.\d{0,2}')
 
     def get_name(self):
         return self.get_random_string()
@@ -100,4 +91,4 @@ class XMLChequeGenerator:
 
 
 x = XMLChequeGenerator()
-x.save_xml('test.xml')
+x.save_xml('test1.xml')
