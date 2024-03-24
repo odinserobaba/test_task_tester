@@ -1,5 +1,6 @@
 import random
 import string
+import subprocess
 import xml.etree.ElementTree as ET
 import re
 import exrex
@@ -89,6 +90,18 @@ class XMLChequeGenerator:
         tree = ET.ElementTree(self.root)
         tree.write(filename, encoding="utf-8", xml_declaration=True)
 
+    def send_xml(self, filename, url):
+        command = ['curl', '-F', f'xml_file=@{filename}', url]
+        result = subprocess.run(
+            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+        if result.returncode == 0:
+            print("XML файл успешно отправлен.")
+        else:
+            print("Ошибка при отправке XML файла.")
+            print(result.stderr.decode('utf-8'))
+
 
 x = XMLChequeGenerator()
 x.save_xml('test1.xml')
+x.send_xml('test1.xml', 'http://localhost:8080/xml')
