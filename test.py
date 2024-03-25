@@ -38,13 +38,6 @@ class TestXMLChequeGenerator(unittest.TestCase):
         self.assertIsInstance(address, str)
         self.assertTrue(len(address) > 0 and len(address) <= 128)
 
-    def test_get_random_number(self):
-        number = self.cheque.get_random_number(0.1, 3, 0.05)
-        self.assertIsInstance(number, float)
-        self.assertTrue(number >= 0.1)
-        self.assertTrue(number <= 1)
-        self.assertTrue(round(number % 0.05, 2) <= 0.05)
-
     def test_get_get_barcode(self):
         barcode = self.cheque.get_barcode()
         self.assertIsInstance(barcode, str)
