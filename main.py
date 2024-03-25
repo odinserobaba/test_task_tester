@@ -2,8 +2,7 @@ import random
 import string
 import subprocess
 import xml.etree.ElementTree as ET
-import re
-import exrex
+import rstr
 import numpy as np
 
 
@@ -12,7 +11,7 @@ class XMLChequeGenerator:
         self.root = ET.Element("Cheque")
 
     def get_random_re(self, pattern):
-        return exrex.getone(pattern)
+        return rstr.xeger(pattern)
 
     def get_random_string(self, length=128):
         valid_characters = string.ascii_letters + string.digits.upper()
@@ -103,5 +102,5 @@ class XMLChequeGenerator:
 
 
 x = XMLChequeGenerator()
-x.save_xml('test1.xml')
-x.send_xml('test1.xml', 'http://localhost:8080/xml')
+x.save_xml('test.xml')
+x.send_xml('test.xml', 'http://localhost:8080/xml')

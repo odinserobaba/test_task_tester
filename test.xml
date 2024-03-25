@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Cheque inn="7818011277" kpp="399215826"
+    address="sxLAOr8kcgGdnMtQwHbXKsnDhpWiExGHNdv1Nkk8HtrIgWVLGNCVHCFH5Tp7As18SyCoYwGsmRgs2Ywh2k9DF8kIfHnx5hqzJeUGXbyO2rWo1am3y4QhHsiNgYPnKxbz"
+    name="LGoQftV7Lj0Cef1bCFAYVhvHNHAkGSuC5CKyG0KQWGK9MffHsVwVH2RT7fTXshxcIQC7thxvz0HJ2GrM6U7QuGmTmuUZPqWuNsUHXadQSX07jliJfNEPXHVCravdjHsI"
+    kassa="W7fp10i35xWznX47BsrBkahOBuD5KmA1RYsYwxmAQJoXq1Bykw8WhbtEFMdwxs9Pu0xaVbW5LXMFXdamO1QQpE5IhDJq8JoIhpRKeXzGwTRpRIV2xNGFduvvNzXYvhug"
+    shift="2" number="40" datetime="3001330928">
+    <Bottle price="7620335406394749670497559860."
+        barcode="06NVNsewgmQOTs4odMjCugJ00133442597293pmYTuHWYlK33YNF0bdYaQ4iwc159jE1"
+        ean="4041485138129" volume="1.6" />
+    <Bottle price="8732591880373215035118120606192547543461915738807933514683258170968744878.2"
+        barcode="96N4ZZePRdppXVXBqYppXca91420375850304B3Ij1qO7GreQr0UWVVDfWFUKnzuTjXA"
+        ean="8584005040985" volume="2.9" />
+    <Bottle price="-937343990396.66"
+        barcode="44NemofvM2uX6Ad4J5ptSGP21713843753246Ip0LciJwqUdy9yatNAtfDkRu8TPO3Db"
+        ean="4017773002472" volume="1.85" />
+    <Bottle price="05925578355174830944598373107728837225347936322049946742415.55"
+        barcode="22N6KXxm8QzzNSLXh_q4XPp10729961199689zKEberZhBoqEK3c59lI5KGU_MPcS5Wh"
+        ean="4607168072120" volume="1.8" />
+</Cheque>
